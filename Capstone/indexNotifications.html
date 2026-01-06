@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AcciTrack • Incident Videos</title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/indexNotifications.css"/>
+</head>
+<style>
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;           
+    margin-top: 10px;   
+    padding-left: 8px;  
+}
+
+.menu-item {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18.5px;      
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.menu-item i {
+    font-size: 18px;        
+    width: 32px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    color: white;
+    transform: translateX(8px);
+}
+
+.menu-item.active {
+    color: white;
+    font-weight: 700;       
+}
+
+.menu-item.active i {
+    color: white;
+}
+</style>
+<body>
+
+    <!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">
+    <img src="assets/images/Logo.png" alt="AcciTrack Logo" class="logo-img"/>
+    <div class="logo-text">
+      <div class="logo-main">AcciTrack</div>
+      <div class="logo-sub">Command Center</div>
+    </div>
+  </div>
+
+<nav class="sidebar-menu">
+    <button type="button" class="menu-item" onclick="location.href='index.html'">
+                <i class="fa-solid fa-gauge-high"></i><span>Dashboard</span>
+            </button>
+    <button type="button" class="menu-item" onclick="location.href='indexIncident.html'">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>Incidents</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexReports.html'">
+        <i class="fa-solid fa-file-lines"></i>
+        <span>Reports</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexPersonal.html'">
+        <i class="fa-solid fa-user-shield"></i>
+        <span>Profile</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexNotifications.html'">
+        <i class="fa-solid fa-bell"></i>
+        <span>Notifications</span>
+    </button>
+</nav>
+        <div class="officer-card">
+            <p>Officer Manhattan</p>
+            <small>Badge #1030</small>
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <header class="top-header">
+            <div class="header-left">
+                <h2 id="greeting">Good Evening, Officer Manhattan!</h2>
+                <p id="datetime">Loading...</p>
+                <input type="text" placeholder="Search incidents, cases, officers..." class="search"/>
+            </div>
+
+            <div class="header-right">
+                <div class="live-indicator">
+                    <span class="pulse"></span>
+                    <small>LIVE</small>
+                </div>
+                <div class="profile profile-text">
+                    <div class="profile-info">
+                        <strong>Officer Manhattan</strong>
+                        <small>On Duty</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+        <body>
+            
+            <!-- START OF NOTIFICATIONS SECTION  -->
+<section class="notifications-container">
+    <div class="notifications-header">
+        <h1>My Report Submissions</h1>
+        <p>Track the status of reports you've submitted for admin review</p>
+    </div>
+
+    <div class="notifications-list" id="reportNotifications">
+        <!-- JS  -->
+    </div>
+</section>
+<!-- REPORT DETAILS MODAL -->
+<div class="modal-overlay" id="reportModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="modal-icon-large" id="modalIcon"></div>
+            <div>
+                <h2 id="modalTitle">Report Details</h2>
+                <p id="modalStatus" class="modal-status-text"></p>
+            </div>
+            <button class="modal-close" id="closeModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="modal-body">
+            <div class="detail-grid" id="modalDetails">
+                <!-- JS  -->
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn-secondary" id="closeBtn">Close</button>
+        </div>
+    </div>
+</div>
+
+
+
+            <script src="script/indexNotifications.js"></script>
+        </body>

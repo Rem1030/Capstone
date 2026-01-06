@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AcciTrack • Reports</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/indexReports.css"/>
+</head>
+
+<style>
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 10px;
+    padding-left: 8px;
+}
+.menu-item {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menu-item i { font-size: 18px; width: 32px; text-align: center; }
+.menu-item:hover { color: white; transform: translateX(8px); }
+.menu-item.active { color: white; font-weight: 700; }
+.menu-item.active i { color: white; }
+</style>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="assets/images/Logo.png" alt="AcciTrack Logo" class="logo-img"/>
+            <div class="logo-text">
+                <div class="logo-main">AcciTrack</div>
+                <div class="logo-sub">Command Center</div>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+           <button type="button" class="menu-item" onclick="location.href='index.html'">
+                <i class="fa-solid fa-gauge-high"></i><span>Dashboard</span>
+            </button>
+            <button type="button" class="menu-item" onclick="location.href='indexIncident.html'">
+                <i class="fa-solid fa-triangle-exclamation"></i><span>Incidents</span>
+            </button>
+            <button type="button" class="menu-item active">
+                <i class="fa-solid fa-file-lines"></i><span>Reports</span>
+            </button>
+            <button type="button" class="menu-item" onclick="location.href='indexPersonal.html'">
+                <i class="fa-solid fa-user-shield"></i><span>Profile</span>
+            </button>
+           <button type="button" class="menu-item" onclick="location.href='indexNotifications.html'">
+        <i class="fa-solid fa-bell"></i>
+        <span>Notifications</span>
+        </button>
+        </nav>
+
+        <div class="officer-card">
+            <p>Officer Manhattan</p>
+            <small>Badge #1030</small>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <header class="top-header">
+            <div class="header-left">
+                <h2 id="greeting">Good Evening, Officer Manhattan!</h2>
+                <p id="datetime">Loading...</p>
+                <input type="text" placeholder="Search incidents, cases, officers..." class="search"/>
+            </div>
+                <div class="profile profile-text">
+                    <div class="profile-info"><strong>Officer Manhattan</strong><small> On Duty</small></div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <section class="content-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 32px; margin-top: 20px;">
+    
+<div class="panel">
+    <div class="section-title-bar">
+        <h3>Quick Accident Report Templates</h3>
+        <button class="new-report-btn-inline" onclick="openReportModal()">
+        <i class="fa-solid fa-plus"></i> New Report
+        </button>
+    </div>
+    <small>Select incident type to begin</small>
+
+    <div class="templates-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 20px;">
+        <button class="template-card">
+            <i class="fa-solid fa-car-burst" style="color:blue;"></i>
+            <div class="template-info">
+                <strong>Minor Traffic Accident</strong>
+                <span>TCR-01 • Property damage only</span>
+            </div>
+        </button>
+        <button class="template-card">
+            <i class="fa-solid fa-gauge-high" style="color:#f97316;"></i>
+            <div class="template-info">
+                <strong>Reckless Driving</strong>
+                <span>RD-22 • Dangerous operation</span>
+            </div>
+        </button>
+        <button class="template-card">
+            <i class="fa-solid fa-wine-bottle" style="color:green;"></i>
+            <div class="template-info">
+                <strong>DUI / DWI</strong>
+                <span>DUI-44 • Driving Under Influence</span>
+            </div>
+        </button>
+        <button class="template-card">
+            <i class="fa-solid fa-person-running" style="color:brown;"></i>
+            <div class="template-info">
+                <strong>Hit & Run</strong>
+                <span>HR-09 • Fleeing suspect</span>
+            </div>
+        </button>
+        <button class="template-card">
+            <i class="fa-solid fa-car-crash" style="color:red;"></i>
+            <div class="template-info">
+                <strong>Multi-Vehicle Pileup</strong>
+                <span>MVC-08 • 3+ vehicles</span>
+            </div>
+        </button>
+        <button class="template-card">
+            <i class="fa-solid fa-skull-crossbones" style="color:black;"></i>
+            <div class="template-info">
+                <strong>Reckless Imprudence Resulting in Homicide</strong>
+                <span>RIRH-01 • Fatal negligence</span>
+            </div>
+        </button>
+    </div>
+</div>
+
+
+<div class="panel">
+    <h3>Recently Generated Reports</h3>
+    <small>Last 7 days • Click to open</small>
+
+    <div class="recent-reports">
+        <!-- 1. Minor Traffic Accident -->
+        <div class="report-row completed">
+            <i class="fa-solid fa-car-burst" style="color:blue;"></i>
+            <div class="report-details">
+                <strong>Minor Traffic Accident</strong>
+                <p>Officer Cruz • Nov 26, 2025 • EDSA Northbound</p>
+            </div>
+            <span class="status">Completed</span>
+        </div>
+
+        <!-- 2. Reckless Driving -->
+        <div class="report-row pending">
+            <i class="fa-solid fa-gauge-high" style="color:#f97316;"></i>
+            <div class="report-details">
+                <strong>Reckless Driving</strong>
+                <p>Officer Reyes • Nov 26, 2025 • Commonwealth Ave</p>
+            </div>
+            <span class="status">Pending Review</span>
+        </div>
+
+        <!-- 3. Hit and Run -->
+        <div class="report-row review">
+            <i class="fa-solid fa-person-running" style="color:brown;"></i>
+            <div class="report-details">
+                <strong>Hit & Run</strong>
+                <p>Officer Scarlet • Nov 25, 2025 • Rosewood Highway</p>
+            </div>
+            <span class="status">Needs Review</span>
+        </div>
+
+        <!-- 4. DUI / DWI -->
+        <div class="report-row completed">
+            <i class="fa-solid fa-wine-bottle" style="color:green;"></i>
+            <div class="report-details">
+                <strong>DUI / DWI</strong>
+                <p>Officer Mendoza • Nov 24, 2025 • Quezon Ave Checkpoint</p>
+            </div>
+            <span class="status">Completed</span>
+        </div>
+
+        <!-- 5. Multi-Vehicle Pileup -->
+        <div class="report-row review">
+            <i class="fa-solid fa-car-crash" style="color:red;"></i>
+            <div class="report-details">
+                <strong>Multi-Vehicle Pileup</strong>
+                <p>Officer Lim • Nov 23, 2025 • NLEX Balintawak</p>
+            </div>
+            <span class="status">Needs Review</span>
+        </div>
+
+        <!-- 6. Reckless Imprudence Resulting in Homicide -->
+        <div class="report-row pending">
+            <i class="fa-solid fa-skull-crossbones" style="color:black;"></i>
+            <div class="report-details">
+                <strong>Reckless Imprudence Resulting in Homicide</strong>
+                <p>Officer Santos • Nov 22, 2025 • C5 Ortigas Flyover</p>
+            </div>
+            <span class="status">Pending Review</span>
+        </div>
+    </div>
+</div>
+        </section>
+    </main>
+
+<div id="reportModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fa-solid fa-file-circle-plus"></i> New Accident Report</h2>
+            <button class="close-btn" onclick="closeReportModal()">×</button>
+        </div>
+
+        <div class="modal-body">
+            <div class="form-grid">
+                <!-- Officer -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-user-shield"></i> Reporting Officer</label>
+                    <input type="text" id="officerName" value="Officer Manhattan" readonly>
+                </div>
+
+                <!--  Date & Time -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-calendar-check"></i> Date & Time</label>
+                    <input type="text" id="reportDateTime" readonly>
+                </div>
+
+                <!-- Location -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-location-dot"></i> Accident Location</label>
+                    <input type="text" id="location" placeholder="e.g. EDSA near SM North, Quezon City" required>
+                </div>
+
+                <!-- Accident Type -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-triangle-exclamation"></i> Type of Accident</label>
+                    <select id="accidentType" required>
+                        <option value="" disabled selected>Select accident type</option>
+                        <option value="Minor Traffic Accident"> Minor Traffic Accident – Property damage only</option>
+                        <option value="Reckless Driving"> Reckless Driving – Dangerous operation</option>
+                        <option value="DUI / DWI"> DUI / DWI – Impaired driver</option>
+                        <option value="Hit & Run"> Hit & Run – Fleeing suspect</option>
+                        <option value="Multi-Vehicle Pileup"> Multi-Vehicle Pileup – 3+ vehicles</option>
+                        <option value="Reckless Imprudence Resulting in Homicide"> Reckless Imprudence Resulting in Homicide – Fatal</option>
+                    </select>
+                </div>
+
+                <!-- Video Upload -->
+                <div class="form-group full-width">
+                    <label><i class="fa-solid fa-video"></i> Upload Video Evidence (Optional)</label>
+                    <div class="video-upload-area" id="videoDropArea">
+                        <i class="fa-solid fa-cloud-arrow-up fa-3x"></i>
+                        <p>Drag & drop video file here or <span class="browse-link">browse</span></p>
+                        <input type="file" id="videoUpload" accept="video/*" hidden>
+                    </div>
+                    <div id="videoPreview" class="video-preview"></div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="cancel-btn" onclick="closeReportModal()">Cancel</button>
+                <button class="submit-btn" onclick="submitReport()">
+                    <i class="fa-solid fa-paper-plane"></i> Submit Report
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- REPORT DETAIL MODAL -->
+<div id="detailModal" class="modal-overlay">
+    <div class="modal-content" style="max-width:800px;">
+        <div class="modal-header" style="background:#1e293b;">
+            <h2><i class="fa-solid fa-file-lines"></i> Report Details</h2>
+            <button class="close-btn" onclick="closeDetailModal()">×</button>
+        </div>
+        <div class="modal-body" id="detailContent" style="padding:32px;">
+        </div>
+    </div>
+</div>
+    <script src="script/indexReports.js"></script>
+</body>
+</html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AcciTrack • Personal Information</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/indexPersonal.css"/>
+</head>
+<style>
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;           
+    margin-top: 10px;   
+    padding-left: 8px;  
+}
+
+.menu-item {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18.5px;      
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.menu-item i {
+    font-size: 18px;        
+    width: 32px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    color: white;
+    transform: translateX(8px);
+}
+
+.menu-item.active {
+    color: white;
+    font-weight: 700;       
+}
+
+.menu-item.active i {
+    color: white;
+}
+</style>
+<body>
+
+   
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/images/Logo.png" alt="AcciTrack Logo" class="logo-img"/>
+        <div class="logo-text">
+          <div class="logo-main">AcciTrack</div>
+          <div class="logo-sub">Command Center</div>
+        </div>
+      </div>
+       <nav class="sidebar-menu">
+    <button type="button" class="menu-item" onclick="location.href='index.html'">
+                <i class="fa-solid fa-gauge-high"></i><span>Dashboard</span>
+            </button>
+    <button type="button" class="menu-item" onclick="location.href='indexIncident.html'">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>Incidents</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexReports.html'">
+        <i class="fa-solid fa-file-lines"></i>
+        <span>Reports</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexPersonal.html'">
+        <i class="fa-solid fa-user-shield"></i>
+        <span>Profile</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexNotifications.html'">
+    <i class="fa-solid fa-bell"></i>
+    <span>Notifications</span>
+</button>
+</nav>
+      <div class="officer-card">
+        <p>Officer Manhattan</p>
+        <small>Badge #1030</small>
+      </div>
+    </aside>
+
+    <main class="main">
+        
+        <header class="top-header">
+            <div class="header-left">
+                <h2 id="greeting">Good Evening, Officer Manhattan!</h2>
+                <p id="datetime">Loading...</p>
+                <input type="text" placeholder="Search incidents, cases, officers..." class="search"/>
+            </div>
+            <div class="header-right">
+                <div class="profile profile-text">
+                    <div class="profile-info">
+                        <strong>Officer Manhattan</strong>
+                        <small>On Duty</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+
+ <!-- PROFILE TAB -->
+<section id="profile" class="page">
+    <header class="top-header" style="margin-bottom:32px;">
+         <button onclick="location.href='index.html'" 
+            style="padding:12px 32px;background:#0b2c66;color:white;border:none;border-radius:50px;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;gap:8px;">
+        <i class="fa-solid fa-chart-simple"></i> Back to Dashboard
+    </button>
+    </header>
+
+<!-- MAIN PROFILE CARD — FINAL & PERFECT -->
+<div style="background:white;border-radius:24px;padding:40px;box-shadow:0 20px 60px rgba(0,0,0,0.1);margin-bottom:40px;">
+    <div style="display:flex;align-items:center;gap:40px;">
+     <!-- Profile Picture -->
+<div style="position:relative;">
+    <img src="assets/images/icon.png" alt="Profile Picture"
+         style="width:160px;height:160px;border-radius:50%;object-fit:cover;box-shadow:0 12px 30px rgba(11,44,102,0.3);border:4px solid white;">
+</div>
+
+        <!-- Info Section -->
+        <div style="flex:1;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                <div>
+                    <h1 style="font-size:36px;font-weight:800;color:#0f172a;margin:0;">Manhattan Cafe</h1>
+                    <p style="font-size:20px;color:#475569;margin:8px 0 20px 0;">Police Officer</p>
+
+         <!-- Email + Phone -->
+                    <div style="display:flex;align-items:center;gap:36px;margin-bottom:20px;">
+                        <span style="display:flex;align-items:center;gap:12px;">
+                            <i class="fa-solid fa-envelope" style="color:#0b2c66;font-size:19px;"></i>
+                            <span style="color:#475569;font-size:16px;">manhattancafe@gmail.com</span>
+                        </span>
+                        <span style="display:flex;align-items:center;gap:12px;">
+                            <i class="fa-solid fa-phone" style="color:#0b2c66;font-size:19px;"></i>
+                            <span style="color:#475569;font-size:16px;">+81 (915) 224-18675</span>
+                        </span>
+                    </div>
+
+                    <!-- Years of Service + Department -->
+                    <div style="display:flex;align-items:flex-start;gap:50px;">
+                    <div>
+                        <div style="color:#64748b;font-size:15px;margin-bottom:6px;">Years of Service</div>
+                        <div style="font-size:32px;font-weight:800;color:#0f172a;line-height:1;">7 years</div>
+                    </div>
+                    <div>
+                        <div style="color:#64748b;font-size:15px;margin-bottom:6px;">Department</div>
+                        <div style="font-size:32px;font-weight:800;color:#0f172a;line-height:1;">Operations</div>
+                    </div>
+                </div>
+            </div>
+                <!-- Right Side: Badge + Buttons -->
+                <div style="text-align:right;">
+                    <div style="background:#e0e7ff;color:#0b2c66;padding:12px 32px;border-radius:40px;font-weight:700;font-size:16px;display:inline-block;margin-bottom:28px;">
+                        Badge #1030
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- TABS -->
+    <div style="background:white;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.1);">
+        <div style="display:flex;border-bottom:1px solid #e2e8f0;background:#f8fafc;">
+            <button class="profile-tab active" onclick="openProfileTab('personal')">Personal Information</button>
+            <button class="profile-tab" onclick="openProfileTab('employment')">Employment Details</button>
+            <button class="profile-tab" onclick="openProfileTab('security')">Security & Access</button>
+            <button class="profile-tab" onclick="openProfileTab('certifications')">Licenses</button>
+            <button class="profile-tab" onclick="openProfileTab('records')">My Records</button>
+        </div>
+
+        <!-- PERSONAL INFORMATION TAB -->
+        <div id="personal" class="profile-tab-content">
+            <div style="padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;">
+
+                <!-- Personal Details -->
+               <div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+                            <h3 style="font-size:22px;font-weight:700;color:#0f172a;">Personal Details</h3>
+                            <button class="btn-edit" onclick="openEditModal('Personal')">
+                                <i class="fa-solid fa-edit"></i> Edit
+                            </button>
+                        </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+                        <div><strong style="color:#64748b;">First Name</strong><p style="font-size:18px;margin:8px 0 0;">Manhattan</p></div>
+                        <div><strong style="color:#64748b;">Middle Name</strong><p style="font-size:18px;margin:8px 0 0;">Sunday</p></div>
+                        <div><strong style="color:#64748b;">Last Name</strong><p style="font-size:18px;margin:8px 0 0;">Cafe</p></div>
+                        <div><strong style="color:#64748b;">Date of Birth</strong><p style="font-size:18px;margin:8px 0 0;">March 05, 1998</p></div>
+                        <div><strong style="color:#64748b;">Gender</strong><p style="font-size:18px;margin:8px 0 0;">Female</p></div>
+                        <div><strong style="color:#64748b;">Nationality</strong><p style="font-size:18px;margin:8px 0 0;">Japan</p></div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+                            <h3 style="font-size:22px;font-weight:700;color:#0f172a;">Contact Information</h3>
+                            <button class="btn-edit" onclick="openEditModal('Contact')">
+                                <i class="fa-solid fa-edit"></i> Edit
+                            </button>
+                        </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+                        <div><strong style="color:#64748b;">Email Address</strong><p style="font-size:18px;margin:8px 0 0;">manhattancafe@gmail.com</p></div>
+                        <div><strong style="color:#64748b;">Primary Phone</strong><p style="font-size:18px;margin:8px 0 0;">+81 (915) 224-18675</p></div>
+                        <div><strong style="color:#64748b;">Alternate Phone</strong><p style="font-size:18px;margin:8px 0 0;">+81 (905) 214-7226</p></div>
+                        <div><strong style="color:#64748b;">Street Address</strong><p style="font-size:18px;margin:8px 0 0;"> Shibuya 2-21-1 Shibuya Sky 10F</p></div>
+                        <div><strong style="color:#64748b;">City</strong><p style="font-size:18px;margin:8px 0 0;">Sapporo</p></div>
+                        <div><strong style="color:#64748b;">Provinces</strong><p style="font-size:18px;margin:8px 0 0;">Hokkaido</p></div>
+                        <div><strong style="color:#64748b;">ZIP Code</strong><p style="font-size:18px;margin:8px 0 0;">4024</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div style="margin-top:48px;padding:32px;background:#f8fafc;border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+                        <h3 style="font-size:22px;font-weight:700;color:#0f172a;">Emergency Contact</h3>
+                        <button class="btn-edit" onclick="openEditModal('Emergency')">
+                            <i class="fa-solid fa-edit"></i> Edit
+                        </button>
+                    </div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+                    <div><strong style="color:#64748b;">Full Name</strong><p style="font-size:18px;margin:8px 0 0;">Agnes Tachyon</p></div>
+                    <div><strong style="color:#64748b;">Relationship</strong><p style="font-size:18px;margin:8px 0 0;">Spouse</p></div>
+                    <div><strong style="color:#64748b;">Primary Phone</strong><p style="font-size:18px;margin:8px 0 0;">+81 (905) 471-8902</p></div>
+                    <div><strong style="color:#64748b;">Alternate Phone</strong><p style="font-size:18px;margin:8px 0 0;">+81 (925) 415-7183</p></div>
+                    <div><strong style="color:#64748b;">Address</strong><p style="font-size:18px;margin:8px 0 0;">Shibuya 2-21-1 Shibuya Sky 10F</p></div>
+                </div>
+            </div>
+        </div>
+
+       <!-- EMPLOYMENT DETAILS TAB -->
+<div id="employment" class="profile-tab-content">
+    <div style="padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;">
+        
+        <!-- LEFT: Employment Information -->
+        <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;">
+                <div>
+                    <h3 style="font-size:22px;font-weight:700;color:#0f172a;margin:0;">Employment Information</h3>
+                    <p style="color:#64748b;margin:8px 0 0;font-size:15px;">Current position and work details</p>
+                </div>
+                <button class="btn-edit" onclick="openEditModal('Employment')">
+                    <i class="fa-solid fa-edit"></i> Edit
+                </button>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Position</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">Police Officer</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Department</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">Administrative Operations</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Employee ID</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">EMP-2024-001</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Badge Number</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">1030</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Hire Date</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">April 23, 2018</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Years of Service</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">7 years</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Supervisor</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">Police Commissioner</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Work Location</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">Headquarters – 2nd Floor</p>
+                </div>
+                <div style="grid-column:span 2;">
+                    <strong style="color:#64748b;font-size:15px;">Work Schedule</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">Operation (Mon-Fri, 08:00–17:00)</p>
+                </div>
+            </div>
+        </div>
+        <!-- RIGHT: Clearance & Permissions -->
+        <div>
+            <h3 style="font-size:22px;font-weight:700;color:#0f172a;margin-bottom:32px;">Clearance & Permissions</h3>
+            <p style="color:#64748b;margin-bottom:32px;font-size:15px;">Security clearance and access level</p>
+
+            <!-- Security Clearance Card -->
+            <div style="background:#f1f5f9;border-radius:20px;padding:28px;margin-bottom:40px;box-shadow:0 8px 25px rgba(0,0,0,0.06);">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div style="display:flex;align-items:center;gap:16px;">
+                        <i class="fa-solid fa-shield-halved" style="font-size:36px;color:#0b2c66;"></i>
+                        <div>
+                            <strong style="font-size:18px;color:#0f172a;display:block;">Security Clearance</strong>
+                            <p style="font-size:24px;font-weight:800;color:#0b2c66;margin:4px 0 0;">Operational</p>
+                        </div>
+                    </div>
+                    <span style="background:#ecfdf5;color:#166534;padding:8px 20px;border-radius:30px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;">
+                        Clearance Active
+                    </span>
+                </div>
+            </div>
+
+            <!-- System Permissions -->
+            <div>
+                <strong style="font-size:18px;color:#0f172a;display:block;margin-bottom:20px;">System Permissions</strong>
+                <div style="display:flex;flex-direction:column;gap:14px;">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fa-solid fa-circle-check" style="color:#10b981;font-size:18px;"></i>
+                        <span style="font-size:17px;color:#0f172a;font-weight:600;">Submit Incident & Accident Reports</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fa-solid fa-circle-check" style="color:#10b981;font-size:18px;"></i>
+                        <span style="font-size:17px;color:#0f172a;font-weight:600;">Upload Evidence (Bodycam, Dashcam)</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fa-solid fa-circle-check" style="color:#10b981;font-size:18px;"></i>
+                        <span style="font-size:17px;color:#0f172a;font-weight:600;">Receive Status Notifications & Updates</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fa-solid fa-circle-check" style="color:#10b981;font-size:18px;"></i>
+                        <span style="font-size:17px;color:#0f172a;font-weight:600;">View My Own Submitted Records</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <i class="fa-solid fa-circle-check" style="color:#10b981;font-size:18px;"></i>
+                        <span style="font-size:17px;color:#0f172a;font-weight:600;">View Assigned Tasks & Duty Schedule</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SECURITY & ACCESS TAB  -->
+<div id="security" class="profile-tab-content">
+    <div style="padding:40px;display:grid;grid-template-columns:520px 1fr;gap:60px;align-items:start;">
+
+        <!-- LEFT: Account Security -->
+        <div>
+            <h3 style="font-size:22px;font-weight:700;color:#0f172a;margin-bottom:16px;">Account Security</h3>
+            <p style="color:#64748b;margin-bottom:40px;font-size:15px;">Manage your account security settings</p>
+
+            <div style="display:flex;flex-direction:column;gap:20px;">
+                <!-- Toggles -->
+                <div style="background:#f8fafc;padding:20px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 15px rgba(0,0,0,0.04);">
+                    <div style="display:flex;align-items:center;gap:16px;">
+                        <i class="fa-solid fa-shield-halved" style="font-size:28px;color:#0b2c66;"></i>
+                        <div>
+                            <strong style="font-size:17px;color:#0f172a;display:block;">Two-Factor Authentication</strong>
+                            <span style="color:#64748b;font-size:14px;">Extra security for your account</span>
+                        </div>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div style="background:#f8fafc;padding:20px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 15px rgba(0,0,0,0.04);">
+                    <div style="display:flex;align-items:center;gap:16px;">
+                        <i class="fa-solid fa-bell" style="font-size:28px;color:#0b2c66;"></i>
+                        <div>
+                            <strong style="font-size:17px;color:#0f172a;display:block;">Login Notifications</strong>
+                            <span style="color:#64748b;font-size:14px;">Get notified of new logins</span>
+                        </div>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+             <!-- Action Buttons -->
+                <div style="display:flex;flex-direction:column;gap:16px;margin-top:20px;">
+                    <button class="security-btn" onclick="document.getElementById('changePasswordModal').style.display='flex'" style="background:#f8fafc;color:#0f172a;">
+                        Change Password
+                    </button>
+                    <button class="security-btn" onclick="document.getElementById('backupCodesModal').style.display='flex'" style="background:#f8fafc;color:#0f172a;">
+                        Manage Backup Codes
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Access History  -->
+        <div>
+            <h3 style="font-size:22px;font-weight:700;color:#0f172a;margin-bottom:16px;">Access History</h3>
+            <p style="color:#64748b;margin-bottom:32px;font-size:15px;">Recent login activity and sessions</p>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px;">
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Last Login</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">Dec 8, 2024 08:30 AM</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Total Logins</strong>
+                    <p style="font-size:19px;font-weight:700;color:#0f172a;margin:8px 0 0;">2,847 times</p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">Account Status</strong>
+                    <p style="margin:8px 0 0;">
+                        <span style="background:#ecfdf5;color:#166534;padding:6px 16px;border-radius:30px;font-weight:700;font-size:14px;">Active</span>
+                    </p>
+                </div>
+                <div>
+                    <strong style="color:#64748b;font-size:15px;">2FA Status</strong>
+                    <p style="margin:8px 0 0;">
+                        <span style="background:#dbeafe;color:#1d4ed8;padding:6px 16px;border-radius:30px;font-weight:700;font-size:14px;">Enabled</span>
+                    </p>
+                </div>
+            </div>
+
+            <strong style="font-size:18px;color:#0f172a;display:block;margin:32px 0 20px;">Recent Sessions</strong>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+                <div style="background:#f8fafc;padding:20px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 15px rgba(0,0,0,0.04);">
+                    <div>
+                        <strong style="font-size:16px;color:#0f172a;">Windows PC</strong>
+                        <p style="color:#64748b;margin:4px 0 0;">Headquarters • 2 hours ago</p>
+                    </div>
+                    <span style="background:#ecfdf5;color:#166534;padding:6px 16px;border-radius:30px;font-weight:700;font-size:13px;">Current</span>
+                </div>
+                <div style="background:#f8fafc;padding:20px;border-radius:16px;display:flex;align-items:center;box-shadow:0 4px 15px rgba(0,0,0,0.04);">
+                    <div>
+                        <strong style="font-size:16px;color:#0f172a;">iPhone 14</strong>
+                        <p style="color:#64748b;margin:4px 0 0;">Headquarters • 1 day ago</p>
+                    </div>
+                </div>
+                <div style="background:#f8fafc;padding:20px;border-radius:16px;display:flex;align-items:center;box-shadow:0 4px 15px rgba(0,0,0,0.04);">
+                    <div>
+                        <strong style="font-size:16px;color:#0f172a;">Windows PC</strong>
+                        <p style="color:#64748b;margin:4px 0 0;">Headquarters • 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- CERTIFICATIONS TAB -->
+<div id="certifications" class="profile-tab-content">
+    <div style="padding:40px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;">
+            <div>
+                <h3 style="font-size:24px;font-weight:700;color:#0f172a;margin:0;">Professional Licenses</h3>
+                <p style="color:#64748b;margin:8px 0 0;font-size:16px;">Your active certifications and licenses</p>
+            </div>
+          <button onclick="openAddCertModal()" style="background:#0b2c66;color:white;padding:12px 28px;border-radius:40px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 8px 20px rgba(11,44,102,0.3);">
+             Add Certification
+            </button>
+        </div>
+
+        <!-- Certifications Grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+
+            <!-- Certificate 1 -->
+            <div style="background:#f8fafc;border-radius:20px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.06);">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+                    <div style="display:flex;align-items:center;gap:16px;">
+                        <i class="fa-solid fa-award" style="font-size:36px;color:#0b2c66;"></i>
+                        <div>
+                            <strong style="font-size:18px;color:#0f172a;display:block;">Police Administration Certification</strong>
+                            <span style="color:#64748b;font-size:14px;">National Police Academy</span>
+                        </div>
+                    </div>
+                    <span style="background:#ecfdf5;color:#166534;padding:6px 16px;border-radius:30px;font-weight:700;font-size:13px;">Active</span>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0;">
+                    <div>
+                        <strong style="color:#64748b;font-size:14px;">Issued</strong>
+                        <p style="font-weight:700;color:#0f172a;margin:6px 0 0;">Jan 2016</p>
+                    </div>
+                    <div>
+                        <strong style="color:#64748b;font-size:14px;">Expires</strong>
+                        <p style="font-weight:700;color:#0f172a;margin:6px 0 0;">Jan 2026</p>
+                    </div>
+                </div>
+         <div style="display:flex;gap:16px;margin-top:24px;">
+    <button style="flex:1;background:#f1f5f9;color:#0b2c66;padding:12px;border-radius:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        View
+    </button>
+    <button style="flex:1;background:#f1f5f9;color:#0b2c66;padding:12px;border-radius:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        Download
+    </button>
+    <button onclick="openDeleteCertModal()" style="background:#fee2e2;color:#dc2626;padding:12px 20px;border-radius:12px;font-weight:600;cursor:pointer;">
+        Delete
+    </button>
+</div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div style="background:#f8fafc;border-radius:20px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.06);">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+                    <div style="display:flex;align-items:center;gap:16px;">
+                        <i class="fa-solid fa-award" style="font-size:36px;color:#0b2c66;"></i>
+                        <div>
+                            <strong style="font-size:18px;color:#0f172a;display:block;">Emergency Management Coordinator</strong>
+                            <span style="color:#64748b;font-size:14px;">Federal Emergency Management Agency</span>
+                        </div>
+                    </div>
+                    <span style="background:#ecfdf5;color:#166534;padding:6px 16px;border-radius:30px;font-weight:700;font-size:13px;">Active</span>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0;">
+                    <div>
+                        <strong style="color:#64748b;font-size:14px;">Issued</strong>
+                        <p style="font-weight:700;color:#0f172a;margin:6px 0 0;">Jun 2017</p>
+                    </div>
+                    <div>
+                        <strong style="color:#64748b;font-size:14px;">Expires</strong>
+                        <p style="font-weight:700;color:#0f172a;margin:6px 0 0;">Jun 2025</p>
+                    </div>
+                </div>
+              <div style="display:flex;gap:16px;margin-top:24px;">
+    <button style="flex:1;background:#f1f5f9;color:#0b2c66;padding:12px;border-radius:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        View
+    </button>
+    <button style="flex:1;background:#f1f5f9;color:#0b2c66;padding:12px;border-radius:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        Download
+    </button>
+    <button onclick="openDeleteCertModal()" style="background:#fee2e2;color:#dc2626;padding:12px 20px;border-radius:12px;font-weight:600;cursor:pointer;">
+        Delete
+    </button>
+</div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div style="background:#f8fafc;border-radius:20px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.06);">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+                    <div style="display:flex;align-items:center;gap:16px;">
+                        <i class="fa-solid fa-award" style="font-size:36px;color:#0b2c66;"></i>
+                        <div>
+                            <strong style="font-size:18px;color:#0f172a;display:block;">Cybersecurity & Data Protection</strong>
+                            <span style="color:#64748b;font-size:14px;">Department of Homeland Security</span>
+                        </div>
+                    </div>
+                    <span style="background:#ecfdf5;color:#166534;padding:6px 16px;border-radius:30px;font-weight:700;font-size:13px;">Active</span>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0;">
+                    <div>
+                        <strong style="color:#64748b;font-size:14px;">Issued</strong>
+                        <p style="font-weight:700;color:#0f172a;margin:6px 0 0;">Mar 2023</p>
+                    </div>
+                    <div>
+                        <strong style="color:#64748b;font-size:14px;">Expires</strong>
+                        <p style="font-weight:700;color:#0f172a;margin:6px 0 0;">Mar 2026</p>
+                    </div>
+                </div>
+                <div style="display:flex;gap:16px;margin-top:24px;">
+    <button style="flex:1;background:#f1f5f9;color:#0b2c66;padding:12px;border-radius:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        View
+    </button>
+    <button style="flex:1;background:#f1f5f9;color:#0b2c66;padding:12px;border-radius:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        Download
+    </button>
+    <button onclick="openDeleteCertModal()" style="background:#fee2e2;color:#dc2626;padding:12px 20px;border-radius:12px;font-weight:600;cursor:pointer;">
+        Delete
+    </button>
+</div>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div style="background:#f8fafc;border-radius:20px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.06);">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+                    <div style="display:flex;align-items:center;gap:16px;">
+                        <i class="fa-solid fa-award" style="font-size:36px;color:#0b2c66;"></i>
+                        <div>
+                            <strong style="font-size:18px;color:#0f172a;display:block;">Leadership in Law Enforcement</strong>
+                            <span style="color:#64748b;font-size:14px;">FBI National Academy</span>
+                        </div>
+                    </div>
+                    <span style="background:#ecfdf5;color:#166534;padding:6px 16px;border-radius:30px;font-weight:700;font-size:13px;">Active</span>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0;">
+                    <div>
+                        <strong style="color:#64748b;font-size:14px;">Issued</strong>
+                        <p style="font-weight:700;color:#0f172a;margin:6px 0 0;">Sep 2019</p>
+                    </div>
+                    <div>
+                        <strong style="color:#64748b;font-size:14px;">Expires</strong>
+                        <p style="font-weight:700;color:#0f172a;margin:6px 0 0;">Lifetime</p>
+                    </div>
+                </div>
+         <div style="display:flex;gap:16px;margin-top:24px;">
+    <button style="flex:1;background:#f1f5f9;color:#0b2c66;padding:12px;border-radius:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        View
+    </button>
+    <button style="flex:1;background:#f1f5f9;color:#0b2c66;padding:12px;border-radius:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        Download
+    </button>
+    <button onclick="openDeleteCertModal()" style="background:#fee2e2;color:#dc2626;padding:12px 20px;border-radius:12px;font-weight:600;cursor:pointer;">
+        Delete
+    </button>
+</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ADD CERTIFICATION MODAL -->
+<div class="modal-overlay" id="addCertModal" style="display:none;">
+    <div class="modal" style="max-width:600px;width:95%;background:white;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+        <div class="modal-header" style="background:#0b2c66;color:white;padding:24px;display:flex;justify-content:space-between;align-items:center;">
+            <h3 style="margin:0;font-size:22px;font-weight:700;">Add New Certification</h3>
+            <button class="close-btn" onclick="closeAddCertModal()">×</button>
+        </div>
+        <div class="modal-body" style="padding:32px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                <div>
+                    <label style="display:block;color:#0f172a;font-weight:600;margin-bottom:8px;">Certification Name</label>
+                    <input type="text" placeholder="e.g. Police Administration Certification" style="width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font-size:15px;">
+                </div>
+                <div>
+                    <label style="display:block;color:#0f172a;font-weight:600;margin-bottom:8px;">Issuing Organization</label>
+                    <input type="text" placeholder="e.g. National Police Academy" style="width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font-size:15px;">
+                </div>
+                <div>
+                    <label style="display:block;color:#0f172a;font-weight:600;margin-bottom:8px;">Issued Date</label>
+                    <input type="date" style="width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font-size:15px;">
+                </div>
+                <div>
+                    <label style="display:block;color:#0f172a;font-weight:600;margin-bottom:8px;">Expiration Date</label>
+                    <input type="date" placeholder="Leave blank for lifetime" style="width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font-size:15px;">
+                </div>
+                <div style="grid-column:span 2;">
+                    <label style="display:block;color:#0f172a;font-weight:600;margin-bottom:8px;">Upload Certificate (PDF/Image)</label>
+                    <input type="file" accept=".pdf,image/*" style="width:100%;padding:14px;border:1px dashed #94a3b8;border-radius:12px;background:#f8fafc;">
+                </div>
+            </div>
+            <div style="display:flex;gap:16px;justify-content:flex-end;margin-top:32px;">
+                <button onclick="closeAddCertModal()" style="padding:14px 28px;background:#f1f5f9;color:#475569;border-radius:12px;font-weight:600;cursor:pointer;">Cancel</button>
+                <button onclick="addNewCertificate()" style="padding:14px 32px;background:#0b2c66;color:white;border-radius:12px;font-weight:600;cursor:pointer;">Add Certification</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DELETE CONFIRMATION MODAL -->
+<div class="modal-overlay" id="deleteCertModal" style="display:none;">
+    <div class="modal" style="max-width:480px;width:95%;background:white;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+        <div class="modal-header" style="background:#dc2626;color:white;padding:24px;text-align:center;">
+            <i class="fa-solid fa-triangle-exclamation" style="font-size:48px;margin-bottom:16px;"></i>
+            <h3 style="margin:0;font-size:22px;font-weight:700;">Delete Certification</h3>
+        </div>
+        <div class="modal-body" style="padding:32px;text-align:center;">
+            <p style="font-size:17px;color:#0f172a;margin-bottom:24px;">Are you sure you want to permanently delete this certification?</p>
+            <p style="font-weight:700;color:#dc2626;margin-bottom:32px;">This action cannot be undone.</p>
+            <div style="display:flex;gap:16px;justify-content:center;">
+                <button onclick="closeDeleteCertModal()" style="padding:14px 32px;background:#f1f5f9;color:#475569;border-radius:12px;font-weight:600;cursor:pointer;">Cancel</button>
+                <button onclick="confirmDeleteCertificate()" style="padding:14px 32px;background:#dc2626;color:white;border-radius:12px;font-weight:600;cursor:pointer;">Delete Permanently</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHANGE PASSWORD MODAL -->
+<div class="modal-overlay" id="changePasswordModal" style="display:none;">
+    <div class="modal" style="max-width:520px;width:95%;background:white;border-radius:20px;overflow:hidden;">
+        <div class="modal-header" style="background:#0b2c66;color:white;padding:24px;display:flex;justify-content:space-between;align-items:center;">
+            <h3 style="margin:0;font-size:22px;font-weight:700;">Change Password</h3>
+            <button class="close-btn" onclick="closeAllModals()">×</button>
+        </div>
+        <div class="modal-body" style="padding:32px;">
+            <div style="display:flex;flex-direction:column;gap:20px;">
+                <div>
+                    <label style="display:block;color:#0f172a;font-weight:600;margin-bottom:8px;">Current Password</label>
+                    <input type="password" placeholder="Enter current password" style="width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font-size:15px;">
+                </div>
+                <div>
+                    <label style="display:block;color:#0f172a;font-weight:600;margin-bottom:8px;">New Password</label>
+                    <input type="password" placeholder="Enter new password" style="width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font-size:15px;">
+                </div>
+                <div>
+                    <label style="display:block;color:#0f172a;font-weight:600;margin-bottom:8px;">Confirm New Password</label>
+                    <input type="password" placeholder="Confirm new password" style="width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font-size:15px;">
+                </div>
+            </div>
+            <div style="display:flex;gap:16px;justify-content:flex-end;margin-top:32px;">
+                <button onclick="closeAllModals()" style="padding:14px 28px;background:#f1f5f9;color:#475569;border-radius:12px;font-weight:600;cursor:pointer;">Cancel</button>
+                <button onclick="alert('Password changed successfully!'); closeAllModals();" style="padding:14px 32px;background:#0b2c66;color:white;border-radius:12px;font-weight:600;cursor:pointer;">Update Password</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MANAGE BACKUP CODES MODAL -->
+<div class="modal-overlay" id="backupCodesModal" style="display:none;">
+    <div class="modal" style="max-width:560px;width:95%;background:white;border-radius:20px;overflow:hidden;">
+        <div class="modal-header" style="background:#0b2c66;color:white;padding:24px;display:flex;justify-content:space-between;align-items:center;">
+            <h3 style="margin:0;font-size:22px;font-weight:700;">Backup Codes</h3>
+            <button class="close-btn" onclick="closeAllModals()">×</button>
+        </div>
+        <div class="modal-body" style="padding:32px;text-align:center;">
+            <p style="color:#475569;margin-bottom:24px;">Use these one-time backup codes if you lose access to your authenticator app.</p>
+            <div style="background:#f8fafc;padding:24px;border-radius:16px;font-family:monospace;font-size:18px;letter-spacing:4px;margin:20px 0;">
+                4829-1746<br>7391-2058<br>1567-8932<br>6041-5279<br>9283-4165
+            </div>
+            <p style="color:#dc2626;font-weight:600;">Each code can only be used once.</p>
+            <div style="margin-top:32px;display:flex;gap:16px;justify-content:center;">
+                <button onclick="alert('Codes copied to clipboard!');" style="padding:14px 32px;background:#0b2c66;color:white;border-radius:12px;font-weight:600;cursor:pointer;">
+                    Copy Codes
+                </button>
+                <button onclick="alert('New codes generated!');" style="padding:14px 32px;background:#f1f5f9;color:#0f172a;border-radius:12px;font-weight:600;cursor:pointer;">
+                    Regenerate
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECURITY LOG MODAL -->
+<div class="modal-overlay" id="securityLogModal" style="display:none;">
+    <div class="modal" style="max-width:700px;width:95%;background:white;border-radius:20px;overflow:hidden;max-height:90vh;">
+        <div class="modal-header" style="background:#dc2626;color:white;padding:24px;display:flex;justify-content:space-between;align-items:center;">
+            <h3 style="margin:0;font-size:22px;font-weight:700;">Security Log</h3>
+            <button class="close-btn" onclick="closeAllModals()">×</button>
+        </div>
+        <div class="modal-body" style="padding:32px;max-height:70vh;overflow-y:auto;">
+            <div style="display:flex;flex-direction:column;gap:20px;">
+                <div style="padding:16px;background:#fef2f2;border-left:4px solid #dc2626;border-radius:8px;">
+                    <strong>Failed Login Attempt</strong> • Dec 8, 2024 02:14 AM • IP: 203.0.113.45
+                </div>
+                <div style="padding:16px;background:#f0fdf4;border-left:4px solid #10b981;border-radius:8px;">
+                    <strong>Successful Login</strong> • Dec 8, 2024 08:30 AM • Windows PC • Headquarters
+                </div>
+                <div style="padding:16px;background:#f0fdf4;border-left:4px solid #10b981;border-radius:8px;">
+                    <strong>Password Changed</strong> • Dec 7, 2024 11:42 PM • iPhone 14
+                </div>
+                <div style="padding:16px;background:#f0fdf4;border-left:4px solid #10b981;border-radius:8px;">
+                    <strong>2FA Enabled</strong> • Dec 1, 2024 09:15 AM • Windows PC
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- EDIT PERSONAL DETAILS -->
+    <div class="modal-overlay" id="editPersonalModal" style="display:none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Edit Personal Details</h3>
+                <button class="close-btn" onclick="closeEditModal('editPersonalModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group"><label>First Name</label><input type="text" value="Manhattan"></div>
+                <div class="form-group"><label>Middle Name</label><input type="text" value="Sunday"></div>
+                <div class="form-group"><label>Last Name</label><input type="text" value="Cafe"></div>
+                <div class="form-group"><label>Date of Birth</label><input type="date" value="1998-03-05"></div>
+                <div class="form-group"><label>Gender</label><select><option>Female</option></select></div>
+                <div class="form-group"><label>Nationality</label><input type="text" value="Japan"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeEditModal('editPersonalModal')">Cancel</button>
+                <button class="btn-submit" onclick="submitChanges('Personal')">Submit Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT CONTACT INFO -->
+    <div class="modal-overlay" id="editContactModal" style="display:none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Edit Contact Information</h3>
+                <button class="close-btn" onclick="closeEditModal('editContactModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group"><label>Email Address</label><input type="email" value="manhattancafe@gmail.com"></div>
+                <div class="form-group"><label>Primary Phone</label><input type="tel" value="+81 (915) 224-18675"></div>
+                <div class="form-group"><label>Alternate Phone</label><input type="tel" value="+81 (905) 214-7226"></div>
+                <div class="form-group"><label>Street Address</label><input type="address" value="Shibuya 2-21-1 Shibuya Sky 10F"></div>
+                <div class="form-group"><label>City</label><input type="address" value="Sapporo"></div>
+                <div class="form-group"><label>Province</label><input type="address" value="Hokkaido"></div>
+                <div class="form-group"><label>ZIP Code</label><input type="address" value="4024"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeEditModal('editContactModal')">Cancel</button>
+                <button class="btn-submit" onclick="submitChanges('Contact')">Submit Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT EMERGENCY CONTACT -->
+    <div class="modal-overlay" id="editEmergencyModal" style="display:none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Edit Emergency Contact</h3>
+                <button class="close-btn" onclick="closeEditModal('editEmergencyModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group"><label>Full Name</label><input type="text" value="Agnes Tachyon"></div>
+                <div class="form-group"><label>Relationship</label><input type="text" value="Spouse"></div>
+                <div class="form-group"><label>Primary Phone</label><input type="tel" value="+81 (905) 471-8902"></div>
+                <div class="form-group"><label>Alternate Phone</label><input type="tel" value="+81 (925) 415-7183"></div>
+                <div class="form-group"><label>Address</label><input type="address" value="Shibuya 2-21-1 Shibuya Sky 10F"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeEditModal('editEmergencyModal')">Cancel</button>
+                <button class="btn-submit" onclick="submitChanges('Emergency')">Submit Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUBMIT CONFIRMATION -->
+    <div class="modal-overlay" id="submitConfirmModal" style="display:none;">
+        <div class="modal" style="max-width:480px;text-align:center;">
+            <div class="modal-header" style="background:#0b2c66;">
+                <h3>Changes Submitted</h3>
+                <button class="close-btn" onclick="closeEditModal('submitConfirmModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <i class="fa-solid fa-check-circle" style="font-size:64px;color:#10b981;margin-bottom:20px;"></i>
+                <p style="font-size:17px;margin-bottom:16px;">
+                    Your changes have been submitted and are now <strong>pending admin review</strong>.
+                </p>
+                <p style="color:#dc2626;font-weight:600;">
+                    The administrator will approve or request further changes.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-submit" onclick="closeEditModal('submitConfirmModal')">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- EDIT EMPLOYMENT DETAILS MODAL -->
+<div class="modal-overlay" id="editEmploymentModal" style="display:none;">
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Edit Employment Information</h3>
+            <button class="close-btn" onclick="closeEditModal('editEmploymentModal')">×</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Position</label>
+                <input type="text" id="editEmpPosition" value="Police Officer">
+            </div>
+            <div class="form-group">
+                <label>Department</label>
+                <input type="text" id="editEmpDepartment" value="Administrative Operations">
+            </div>
+            <div class="form-group">
+                <label>Employee ID</label>
+                <input type="text" id="editEmpID" value="EMP-2024-001">
+            </div>
+            <div class="form-group">
+                <label>Badge Number</label>
+                <input type="text" id="editEmpBadge" value="1030">
+            </div>
+            <div class="form-group">
+                <label>Hire Date</label>
+                <input type="date" id="editEmpHireDate" value="2018-04-23">
+            </div>
+            <div class="form-group">
+                <label>Years of Service</label>
+                <input type="text" id="editEmpYears" value="7 years">
+            </div>
+            <div class="form-group">
+                <label>Supervisor</label>
+                <input type="text" id="editEmpSupervisor" value="Police Commissioner">
+            </div>
+            <div class="form-group">
+                <label>Work Location</label>
+                <input type="text" id="editEmpWorkLocation" value="Headquarters – 2nd Floor">
+            </div>
+            <div class="form-group">
+                <label>Work Schedule</label>
+                <input type="text" id="editEmpSchedule" value="Operation (Mon-Fri, 08:00–17:00)">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="closeEditModal('editEmploymentModal')">Cancel</button>
+            <button class="btn-submit" onclick="submitChanges('Employment')">Submit Changes</button>
+        </div>
+    </div>
+</div>
+<!--  MY RECORDS TAB -->
+    <div id="records" class="profile-tab-content" style="display:none;">
+        <div style="padding:40px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;">
+                <div>
+                    <h3 style="font-size:24px;font-weight:700;color:#0f172a;margin:0;">My Report History</h3>
+<p style="color:#64748b;margin:8px 0 0;font-size:16px;">Review all your submitted incident and accident reports, including status and review progress</p>
+                </div>
+            </div>
+
+            <!-- Records Table -->
+            <div style="overflow-x:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,0.06);">
+                <table style="width:100%;border-collapse:collapse;background:white;">
+                    <thead>
+                        <tr style="background:#f8fafc;border-bottom:2px solid #e2e8f0;">
+                            <th style="padding:16px;text-align:left;font-weight:700;color:#0f172a;">Report ID</th>
+                            <th style="padding:16px;text-align:left;font-weight:700;color:#0f172a;">Type</th>
+                            <th style="padding:16px;text-align:left;font-weight:700;color:#0f172a;">Date Submitted</th>
+                            <th style="padding:16px;text-align:left;font-weight:700;color:#0f172a;">Location</th>
+                            <th style="padding:16px;text-align:left;font-weight:700;color:#0f172a;">Status</th>
+                            <th style="padding:16px;text-align:center;font-weight:700;color:#0f172a;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsTableBody">
+                        <!-- Sample rows  -->
+                        <tr style="border-bottom:1px solid #e2e8f0;">
+                            <td style="padding:16px;">REP-2025-001</td>
+                            <td style="padding:16px;">Hit & Run</td>
+                            <td style="padding:16px;">Dec 28, 2025</td>
+                            <td style="padding:16px;">EDSA Northbound</td>
+                            <td style="padding:16px;">
+                                <span style="background:#fef3c7;color:#d97706;padding:6px 16px;border-radius:30px;font-weight:700;font-size:13px;">
+                                    Pending Review
+                                </span>
+                            </td>
+                            <td style="padding:16px;text-align:center;">
+                                <button style="background:#0b2c66;color:white;border:none;padding:8px 16px;border-radius:12px;font-size:13px;cursor:pointer;">View</button>
+                                <button style="background:#f1f5f9;color:#475569;border:none;padding:8px 16px;border-radius:12px;font-size:13px;margin-left:8px;">Download PDF</button>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom:1px solid #e2e8f0;">
+                            <td style="padding:16px;">REP-2025-002</td>
+                            <td style="padding:16px;">DUI Arrest</td>
+                            <td style="padding:16px;">Dec 15, 2025</td>
+                            <td style="padding:16px;">Katipunan Ave</td>
+                            <td style="padding:16px;">
+                                <span style="background:#ecfdf5;color:#166534;padding:6px 16px;border-radius:30px;font-weight:700;font-size:13px;">
+                                    Approved
+                                </span>
+                            </td>
+                            <td style="padding:16px;text-align:center;">
+                                <button style="background:#0b2c66;color:white;border:none;padding:8px 16px;border-radius:12px;font-size:13px;cursor:pointer;">View</button>
+                                <button style="background:#f1f5f9;color:#475569;border:none;padding:8px 16px;border-radius:12px;font-size:13px;margin-left:8px;">Download PDF</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:16px;">REP-2025-003</td>
+                            <td style="padding:16px;">Multi-Vehicle</td>
+                            <td style="padding:16px;">Nov 10, 2025</td>
+                            <td style="padding:16px;">Commonwealth Ave</td>
+                            <td style="padding:16px;">
+                                <span style="background:#fee2e2;color:#dc2626;padding:6px 16px;border-radius:30px;font-weight:700;font-size:13px;">
+                                    Changes Requested
+                                </span>
+                            </td>
+                            <td style="padding:16px;text-align:center;">
+                                <button style="background:#0b2c66;color:white;border:none;padding:8px 16px;border-radius:12px;font-size:13px;cursor:pointer;">View</button>
+                                <button style="background:#f1f5f9;color:#475569;border:none;padding:8px 16px;border-radius:12px;font-size:13px;margin-left:8px;">Download PDF</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- No records message -->
+            <div id="noRecords" style="text-align:center;padding:80px 20px;color:#64748b;display:none;">
+                <i class="fa-solid fa-folder-open" style="font-size:64px;margin-bottom:20px;opacity:0.4;"></i>
+                <h3 style="font-size:22px;margin:0 0 12px;color:#1e293b;">No Records Yet</h3>
+                <p style="font-size:16px;">You haven’t submitted any reports. Once submitted, they will appear here.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+    </main>
+
+  
+    <script src="script/index.js"></script>
+</body>
+</html>

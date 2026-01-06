@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AcciTrack • Incident Videos</title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/indexIncident.css"/>
+</head>
+<style>
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;          
+    margin-top: 10px;    
+    padding-left: 8px;  
+}
+
+.menu-item {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18.5px;     
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.menu-item i {
+    font-size: 18px;      
+    width: 32px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    color: white;
+    transform: translateX(8px);
+}
+
+.menu-item.active {
+    color: white;
+    font-weight: 700;       
+}
+
+.menu-item.active i {
+    color: white;
+}
+</style>
+<body>
+
+    <!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">
+    <img src="assets/images/Logo.png" alt="AcciTrack Logo" class="logo-img"/>
+    <div class="logo-text">
+      <div class="logo-main">AcciTrack</div>
+      <div class="logo-sub">Command Center</div>
+    </div>
+  </div>
+
+<nav class="sidebar-menu">
+    <button type="button" class="menu-item active" onclick="location.href='index.html'">
+        <i class="fa-solid fa-gauge-high"></i>
+        <span>Dashboard</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexIncident.html'">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>Incidents</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexReports.html'">
+        <i class="fa-solid fa-file-lines"></i>
+        <span>Reports</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexPersonal.html'">
+        <i class="fa-solid fa-user-shield"></i>
+        <span>Profile</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexNotifications.html'">
+    <i class="fa-solid fa-bell"></i>
+    <span>Notifications</span>
+</button>
+</nav>
+        <div class="officer-card">
+            <p>Officer Manhattan</p>
+            <small>Badge #1030</small>
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <header class="top-header">
+            <div class="header-left">
+                <h2 id="greeting">Good Evening, Officer Manhattan!</h2>
+                <p id="datetime">Loading...</p>
+                <input type="text" placeholder="Search incidents, cases, officers..." class="search"/>
+            </div>
+
+            <div class="header-right">
+                <div class="live-indicator">
+                    <span class="pulse"></span>
+                    <small>LIVE</small>
+                </div>
+                <div class="profile profile-text">
+                    <div class="profile-info">
+                        <strong>Officer Manhattan</strong>
+                        <small>On Duty</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- STAT CARDS -->
+        <section class="cards">
+            <div class="card stat red"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div><div><h3>24</h3><p>Recent Incidents</p><small>+3 from yesterday</small></div></div>
+            <div class="card stat green"><div class="icon"><i class="fa-solid fa-circle-check"></i></div><div><h3>18</h3><p>Resolved Today</p><small>+12% from yesterday</small></div></div>
+            <div class="card stat yellow"><div class="icon"><i class="fa-solid fa-user"></i></div><div><h3>47</h3><p>Personnel on Duty</p><small>Real-time update</small></div></div>
+            <div class="card stat blue"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><div><h3>8.5m</h3><p>Avg Response Time</p><small>Improved 15%</small></div></div>
+        </section>
+
+        <!-- MAIN GRID -->
+        <section class="content-grid">
+           
+<div class="panel quick-actions">
+    <h3>Quick Actions</h3>
+    <small>Frequently used actions</small>
+
+
+<div class="quick-actions-grid">
+ 
+    <button type="button" class="qa-btn primary" onclick="location.href='indexReports.html'">
+        <i class="fa-solid fa-plus"></i>
+        <div class="qa-text">
+            <strong>New Incident</strong>
+            <span>Report incident</span>
+        </div>
+    </button>
+
+   
+    <button type="button" class="qa-btn secondary" onclick="location.href='indexReports.html'">
+        <i class="fa-solid fa-file-lines"></i>
+        <div class="qa-text">
+            <strong>Create Report</strong>
+            <span>Generate report</span>
+        </div>
+    </button>
+
+
+    <button type="button" class="qa-btn secondary" onclick="location.href='indexPersonal.html'">
+        <i class="fa-solid fa-address-card"></i>
+        <div class="qa-text">
+            <strong>Profile Edits</strong>
+            <span>Daily Checklist</span>
+        </div>
+    </button>
+
+    <button type="button" class="qa-btn primary" onclick="location.href='indexNotifications.html'">
+        <i class="fa-solid fa-bell bell-ring"></i>
+        <div class="qa-text">
+            <strong>Notifications</strong>
+            <span>Review Submissions</span>
+        </div>
+    </button>
+</div>
+
+    <div class="priority-tasks">
+        <div class="section-title">
+            <i class="fa-solid fa-list-check"></i>
+            <strong>Today's Priority Tasks</strong>
+            <span class="task-count" id="taskCount">4</span>
+        </div>
+
+        <div class="task-list" id="taskList">
+
+    <div class="task-item high">
+        <i class="fa-solid fa-circle-dot"></i>
+        <div class="task-content">
+            <strong>Review EDSA Collision Footage</strong>
+            <small>Bodycam #47 • Due in 2 hrs</small>
+        </div>
+        <span class="task-badge">URGENT</span>
+        <button class="delete-btn" title="Delete task">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div class="task-item medium">
+        <i class="fa-solid fa-circle-dot"></i>
+        <div class="task-content">
+            <strong>Submit Monthly Traffic Report</strong>
+            <small>Draft ready • 14 pages</small>
+        </div>
+        <button class="delete-btn" title="Delete task">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+
+    <div class="task-item low">
+        <i class="fa-solid fa-circle-dot"></i>
+        <div class="task-content">
+            <strong>Calibrate Bodycam Units</strong>
+            <small>12/15 units completed</small>
+        </div>
+        <button class="delete-btn" title="Delete task">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+
+    <div class="task-item info">
+        <i class="fa-solid fa-circle-dot"></i>
+        <div class="task-content">
+            <strong>Play Zomboid</strong>
+            <small>Platero Velasco Subdivision • 11:00 PM</small>
+        </div>
+        <button class="delete-btn" title="Delete task">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+</div>
+
+  
+        <button class="add-task-btn" id="openTaskModal">
+            <i class="fa-solid fa-plus"></i>
+            Add New Task
+        </button>
+    </div>
+</div>
+
+<div class="modal-overlay" id="taskModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Add New Task</h3>
+            <button class="close-btn" id="closeModal">×</button>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="taskTitle" placeholder="Task title" required>
+            <input type="text" id="taskDesc" placeholder="Details (optional)">
+            <select id="taskPriority">
+                <option value="high">High Priority (Red)</option>
+                <option value="medium">Medium (Yellow)</option>
+                <option value="low">Low (Green)</option>
+                <option value="info">Info (Blue)</option>
+            </select>
+            <button id="saveTask">Add Task</button>
+        </div>
+    </div>
+</div>
+            <!-- Active Cases -->
+            <div class="panel active-cases">
+                <h3>Active Cases</h3>
+                <small>Currently under investigation</small>
+                <div class="case"><div class="case-header"><i class="fa-solid fa-file-lines"></i><span class="case-id">CASE-2024-089</span><span class="badge high">High</span></div><div class="case-title">Reckless Driving</div><div class="case-officer">Officer Urara</div><div class="progress-bar"><div class="progress" style="width:65%"></div></div><div class="progress-percent">65%</div></div>
+                <div class="case"><div class="case-header"><i class="fa-solid fa-file-lines"></i><span class="case-id">CASE-2024-087</span><span class="badge medium">Medium</span></div><div class="case-title">Hit and Run</div><div class="case-officer">Officer Scarlet</div><div class="progress-bar"><div class="progress" style="width:40%"></div></div><div class="progress-percent">40%</div></div>
+                <div class="case"><div class="case-header"><i class="fa-solid fa-file-lines"></i><span class="case-id">CASE-2024-085</span><span class="badge high">High</span></div><div class="case-title">DUI Checkpoint Violation</div><div class="case-officer">Officer Tachyon</div><div class="progress-bar"><div class="progress" style="width:80%"></div></div><div class="progress-percent">80%</div></div>
+                <div class="case"><div class="case-header"><i class="fa-solid fa-file-lines"></i><span class="case-id">CASE-2024-082</span><span class="badge low">Low</span></div><div class="case-title">Minor Traffic Accident</div><div class="case-officer">Officer Goldship</div><div class="progress-bar"><div class="progress" style="width:90%"></div></div><div class="progress-percent">90%</div></div>
+            </div>
+        </section>
+
+        <section class="recent-incidents-panel panel">
+            <h3>Recent Incidents</h3>
+            <small>Latest reported from body cameras</small>
+
+            <div class="incident">
+                <div class="incident-header"><span class="incident-id">INC-2024-1237</span><span class="badge high">High</span><span class="badge in-progress">In Progress</span></div>
+                <div class="incident-title">Vehicle Collision Detected</div>
+                <div class="incident-details"><i class="fa-solid fa-location-dot"></i> 420 Rosewood Highway <i class="fa-regular fa-clock"></i> 4 mins ago</div>
+            </div>
+
+            <div class="incident">
+                <div class="incident-header"><span class="incident-id">INC-2024-1236</span><span class="badge medium">Medium</span><span class="badge assigned">Assigned</span></div>
+                <div class="incident-title">Hit and Run – Suspect Fled Scene</div>
+                <div class="incident-details"><i class="fa-solid fa-location-dot"></i> Grand Bellhart Central Mall <i class="fa-regular fa-clock"></i> 17 mins ago</div>
+            </div>
+
+            <div class="incident">
+                <div class="incident-header"><span class="incident-id">INC-2024-1235</span><span class="badge low">Low</span><span class="badge resolved">Resolved</span></div>
+                <div class="incident-title">Minor Rear-End Collision</div>
+                <div class="incident-details"><i class="fa-solid fa-location-dot"></i> City of Tears Interchange <i class="fa-regular fa-clock"></i> 2 hours ago</div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script/index.js"></script>
+</body>
+</html>

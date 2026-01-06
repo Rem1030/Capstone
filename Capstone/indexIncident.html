@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AcciTrack • Incident Videos</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
+
+    <link rel="stylesheet" href="assets/indexIncident.css"/>
+</head>
+
+<style>
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;           
+    margin-top: 10px;    
+    padding-left: 8px;  
+}
+
+.menu-item {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18.5px;      
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.menu-item i {
+    font-size: 18px;        
+    width: 32px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    color: white;
+    transform: translateX(8px);
+}
+
+.menu-item.active {
+    color: white;
+    font-weight: 700;       
+}
+
+.menu-item.active i {
+    color: white;
+}
+</style>
+
+<body>
+
+    <!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">
+    <img src="assets/images/Logo.png" alt="AcciTrack Logo" class="logo-img"/>
+    <div class="logo-text">
+      <div class="logo-main">AcciTrack</div>
+      <div class="logo-sub">Command Center</div>
+    </div>
+  </div>
+
+        <nav class="sidebar-menu">
+    <button type="button" class="menu-item" onclick="location.href='index.html'">
+                <i class="fa-solid fa-gauge-high"></i><span>Dashboard</span>
+            </button>
+    <button type="button" class="menu-item" onclick="location.href='indexIncident.html'">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>Incidents</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexReports.html'">
+        <i class="fa-solid fa-file-lines"></i>
+        <span>Reports</span>
+    </button>
+    <button type="button" class="menu-item" onclick="location.href='indexPersonal.html'">
+        <i class="fa-solid fa-user-shield"></i>
+        <span>Profile</span>
+    </button>
+   <button type="button" class="menu-item" onclick="location.href='indexNotifications.html'">
+    <i class="fa-solid fa-bell"></i>
+    <span>Notifications</span>
+</button>
+</nav>
+
+        <div class="officer-card">
+            <p>Officer Manhattan</p>
+            <small>Badge #1030</small>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <header class="top-header">
+            <div class="header-left">
+                <h2 id="greeting">Good Evening, Officer Manhattan!</h2>
+                <p id="datetime">Loading...</p>
+                <input type="text" placeholder="Search incidents, cases, officers..." class="search"/>
+            </div>
+
+            <div class="header-right">
+                <div class="profile profile-text">
+                    <div class="profile-info">
+                        <strong>Officer Manhattan</strong>
+                        <small>On Duty</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="incident-grid">
+    
+            <div class="video-card">
+                <video controls poster="assets/images/thumbnail.jpg">
+                    <source src="assets/videos/incident-089.mp4" type="video/mp4">
+                </video>
+                <div class="video-caption">
+                    <strong>INC-2024-089</strong>
+                    <p>Multi-Vehicle Collision • EDSA Northbound</p>
+                </div>
+            </div>
+
+
+            <div class="details-grid">
+
+                <div class="detail-card officer">
+                    <div class="icon-circle officer">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div class="content">
+                        <h4>Officer who caught the video</h4>
+                        <p>Sgt. Michael Reyes<br>
+                            <small>Badge #0891 • Unit 4A</small>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="detail-card date">
+                    <div class="icon-circle date">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div class="content">
+                        <h4>Date and Time of Accident</h4>
+                        <p>November 25, 2025<br>
+                            <small>08:47 PM</small>
+                        </p>
+                    </div>
+                </div>
+
+     
+                <div class="detail-card critical">
+                    <div class="icon-circle critical">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="content">
+                        <h4>Type of Accident</h4>
+                        <p>Multi-Vehicle Collision<br>
+                            <span class="badge critical">HIGH PRIORITY</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-card location">
+                    <div class="icon-circle location">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="content">
+                        <h4>Location of Accident</h4>
+                        <p>EDSA Northbound<br>
+                            <small>near Quezon Avenue MRT Station<br>Quezon City</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+
+    <script src="script/indexIncident.js"></script>
+</body>
+</html>
